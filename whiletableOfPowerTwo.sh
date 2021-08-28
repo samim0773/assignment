@@ -1,12 +1,14 @@
-#!/bin/bash -x
+#!/bin bash -x
 
-read -p  "Enter a number: " num
-
-echo " Enter number:" $num
-condition=$((2**num))
-
-while [ $condition -le 256 ]
-do
-	echo "result: " $condition
-	condition= $condition + 1
-done
+read -p "Enter the Number:-" n
+i=0
+while [ $i -lt $n ]
+ 	do
+		poweroftwo=$((2**$i))
+		if [ $poweroftwo -gt 256 ]
+			then
+					break
+			fi
+		echo $poweroftwo
+		((i++))
+	done
